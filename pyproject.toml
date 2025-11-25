@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project] 
+name = "timelock"
+version = "0.0.1"
+authors = [
+    {name="amHossein", email="hosseinhastam1999@gmail.com"}
+]
+description = "a countdown timer that locks you into a single task"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",     
+    "Development Status :: 1 - Planning",        
+]
+license = {text = "MIT"}
+#license-files = ["LICENCE"]
+
+
+[tool.hatch.build]
+packages = ["src/timelock"]
+
+
+[project.scripts]
+timelock = "timelock.main:main"
